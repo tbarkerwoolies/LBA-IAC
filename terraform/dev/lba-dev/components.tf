@@ -20,6 +20,15 @@ resource "azurerm_storage_account" "this_2a028927" {
   location                 = "australiaeast"
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  https_traffic_only_enabled = "false"
+  tags = {}
+}
+resource "azurerm_storage_account" "this_09dd1f14" {
+  name                     = "spcspagstore"
+  resource_group_name      = "lba-dev-aae"
+  location                 = "australiaeast"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
   https_traffic_only_enabled = "true"
   tags = {}
 }
@@ -81,6 +90,26 @@ output "comp_2a028927_primary_connection_string" {
 }
 output "comp_2a028927_primary_blob_endpoint" {
   value     = azurerm_storage_account.this_2a028927.primary_blob_endpoint
+  sensitive = true
+}
+output "comp_09dd1f14_name" {
+  value     = azurerm_storage_account.this_09dd1f14.name
+  sensitive = true
+}
+output "comp_09dd1f14_id" {
+  value     = azurerm_storage_account.this_09dd1f14.id
+  sensitive = true
+}
+output "comp_09dd1f14_primary_access_key" {
+  value     = azurerm_storage_account.this_09dd1f14.primary_access_key
+  sensitive = true
+}
+output "comp_09dd1f14_primary_connection_string" {
+  value     = azurerm_storage_account.this_09dd1f14.primary_connection_string
+  sensitive = true
+}
+output "comp_09dd1f14_primary_blob_endpoint" {
+  value     = azurerm_storage_account.this_09dd1f14.primary_blob_endpoint
   sensitive = true
 }
 output "comp_bcab3f9d_id" {
