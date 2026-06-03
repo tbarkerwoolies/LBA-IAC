@@ -23,8 +23,8 @@ resource "azurerm_storage_account" "this_2a028927" {
   https_traffic_only_enabled = "false"
   tags = {}
 }
-resource "azurerm_storage_account" "this_da8f17f1" {
-  name                     = "spcspagstore"
+resource "azurerm_storage_account" "this_1708084a" {
+  name                     = "spcspagstore2"
   resource_group_name      = "lba-dev-aae"
   location                 = "australiaeast"
   account_tier             = "Standard"
@@ -92,24 +92,24 @@ output "comp_2a028927_primary_blob_endpoint" {
   value     = azurerm_storage_account.this_2a028927.primary_blob_endpoint
   sensitive = true
 }
-output "comp_da8f17f1_name" {
-  value     = azurerm_storage_account.this_da8f17f1.name
+output "comp_1708084a_name" {
+  value     = azurerm_storage_account.this_1708084a.name
   sensitive = true
 }
-output "comp_da8f17f1_id" {
-  value     = azurerm_storage_account.this_da8f17f1.id
+output "comp_1708084a_id" {
+  value     = azurerm_storage_account.this_1708084a.id
   sensitive = true
 }
-output "comp_da8f17f1_primary_access_key" {
-  value     = azurerm_storage_account.this_da8f17f1.primary_access_key
+output "comp_1708084a_primary_access_key" {
+  value     = azurerm_storage_account.this_1708084a.primary_access_key
   sensitive = true
 }
-output "comp_da8f17f1_primary_connection_string" {
-  value     = azurerm_storage_account.this_da8f17f1.primary_connection_string
+output "comp_1708084a_primary_connection_string" {
+  value     = azurerm_storage_account.this_1708084a.primary_connection_string
   sensitive = true
 }
-output "comp_da8f17f1_primary_blob_endpoint" {
-  value     = azurerm_storage_account.this_da8f17f1.primary_blob_endpoint
+output "comp_1708084a_primary_blob_endpoint" {
+  value     = azurerm_storage_account.this_1708084a.primary_blob_endpoint
   sensitive = true
 }
 output "comp_bcab3f9d_id" {
